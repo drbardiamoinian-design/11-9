@@ -42,7 +42,7 @@ const PLANE_W = 130, PLANE_H = 130;
 const PLANE_HIT_LEFT   = 8;
 const PLANE_HIT_RIGHT  = 8;   // inset from right
 const PLANE_HIT_TOP    = 69;
-const PLANE_HIT_BOTTOM = 48;  // inset from bottom
+const PLANE_HIT_BOTTOM = 49;  // inset from bottom
 
 const EXP_DURATION = 700;
 
@@ -218,7 +218,7 @@ function init() {
       ctx.textAlign = 'center';
       ctx.font = 'bold 38px monospace';
       ctx.fillStyle = over ? '#ff4040' : '#88ccff';
-      ctx.fillText(over ? 'THEY HIT THE SECOND TOWER!' : 'AIR DODGE', GW/2, GH/2 - 55);
+      if (over) ctx.fillText('THEY HIT THE SECOND TOWER!', GW/2, GH/2 - 55);
       if (over) {
         ctx.font = '16px monospace';
         ctx.fillStyle = '#aaddff';
@@ -226,7 +226,7 @@ function init() {
       } else {
         ctx.font = '13px monospace';
         ctx.fillStyle = '#7799bb';
-        ctx.fillText('DRAG YOUR SHAPE UP & DOWN TO DODGE', GW/2, GH/2 - 10);
+       
       }
       const bx = GW/2 - 60, by = GH/2 + 15;
       ctx.fillStyle = '#1a4080';

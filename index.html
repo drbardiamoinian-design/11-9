@@ -41,7 +41,7 @@ const PLANE_W = 130, PLANE_H = 130;
 // and nearly full width (6%-94%). At 130px: y+46 to y+84, x+8 to x+122
 const PLANE_HIT_LEFT   = 8;
 const PLANE_HIT_RIGHT  = 8;   // inset from right
-const PLANE_HIT_TOP    = 70;
+const PLANE_HIT_TOP    = 69;
 const PLANE_HIT_BOTTOM = 46;  // inset from bottom
 
 const EXP_DURATION = 700;
@@ -218,7 +218,7 @@ function init() {
       ctx.textAlign = 'center';
       ctx.font = 'bold 38px monospace';
       ctx.fillStyle = over ? '#ff4040' : '#88ccff';
-      ctx.fillText(over ? 'GAME OVER' : 'AIR DODGE', GW/2, GH/2 - 55);
+      ctx.fillText(over ? 'THEY HIT THE SECOND TOWER!' : 'AIR DODGE', GW/2, GH/2 - 55);
       if (over) {
         ctx.font = '16px monospace';
         ctx.fillStyle = '#aaddff';
